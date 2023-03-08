@@ -162,10 +162,10 @@ class App extends Component {
             top: 'center',
             feature: {
                 mark: { show: true },
-                dataView: { show: true, readOnly: false },
-                magicType: { show: true, type: ['line', 'bar', 'stack'] },
-                restore: { show: true },
-                saveAsImage: { show: true }
+                dataView: { show: false, readOnly: false },//数据穿透预览
+                magicType: { show: true, type: ['line', 'bar', 'stack'] },//柱状图和折线图的转换
+                restore: { show: true },//数据刷新
+                saveAsImage: { show: false }//保存为图片
             }
         },
         // 下方的时间拖动条

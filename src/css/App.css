@@ -1,0 +1,106 @@
+.App {
+    text-align: center;
+}
+
+#LengJi_Chart{
+    width: 31%;
+    height: 100%;
+    /* background-color: white; */
+    margin-left: 2%;
+    position: absolute;
+    background: url("../img/panel.png") 0 0 / 100% 100% no-repeat;
+}
+#LengTa_Chart{
+    width: 31%;
+    height: 100%;
+    /* background:white; */
+    margin-left: 34.5%;
+    position: absolute;
+    background: url("../img/panel.png") 0 0 / 100% 100% no-repeat;
+}
+#ZhiLengDanYuan_Chart{
+    width: 31%;
+    height: 100%;
+    margin-left: 67%;
+    /* background: white; */
+    background: url("../img/panel.png") 0 0 / 100% 100% no-repeat;
+}
+#LengDongBeng_Chart{
+    margin-top: 2.5%;
+    width: 100%;
+    height: 40%;
+    /* background: white; */
+    background: url("../img/panel.png") 0 0 / 100% 100% no-repeat;
+}
+#LengQueBeng_Chart{
+    margin-top: 3%;
+    width: 100%;
+    height: 40%;
+    /* background: white; */
+    background: url("../img/panel.png") 0 0 / 100% 100% no-repeat;
+}
+#BanHuan_Chart{
+    margin-top: 2.5%;
+    width: 100%;
+    height: 40%;
+    /* background: white; */
+    background: url("../img/panel.png") 0 0 / 100% 100% no-repeat;
+}
+#LengJiJinChuShui_Chart{
+    margin-top: 3%;
+    width: 100%;
+    height: 40%;
+    /* background: white; */
+    background: url("../img/panel.png") 0 0 / 100% 100% no-repeat;
+}
+#XuLengGuan{
+    margin-top: 10%;
+    width: 100%;
+    height: 50%;
+    /* background: white; */
+    background: url("../img/panel.png") 0 0 / 100% 100% no-repeat;
+}
+.rootData{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background:#050d3c url("../img/bg.png") 0 0 / 100% 100% no-repeat;
+}
+.topDiv{
+    width:100%;
+    height: 30%;
+    /* background-color: white; */
+    overflow: auto;
+    position: relative
+}
+.bottomDiv{
+    width:100%;
+    height: 70%;
+    /* background-color: white; */
+    overflow: auto;
+    position: relative
+}
+.LeftBottomDiv{
+    width: 31%;
+    height: 100%;
+    /* background-color: blue; */
+    margin-left: 2%;
+    position: absolute;
+}
+.CenterBottomDiv{
+    width: 31%;
+    height: 100%;
+    /* background:aquamarine; */
+    margin-left: 34.5%;
+    position: absolute;
+}
+.RightBottomDiv{
+    width: 31%;
+    height: 100%;
+    margin-left: 67%;
+    /* background: saddlebrown; */
+    position: absolute;
+}

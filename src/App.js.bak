@@ -1,0 +1,64 @@
+import React, { Component } from 'react'
+import './css/index.css'
+import './css/App.css'
+import { 
+  FullScreenContainer,
+  BorderBox13,
+  Decoration5,Decoration11,
+} from '@jiaminghi/data-view-react'
+
+// const bBox11title = "大数据监控平台"
+
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      
+      topdata1:{
+        
+      }
+    }
+  }
+
+  render() { 
+    return ( 
+      <div className="rootData">
+        {/* 全屏容器 */}
+        <FullScreenContainer>
+          <div>
+            <Decoration11 style={{width: '200px', height: '60px',color:'white',fontWeight: 'bold',fontSize:'20px', top: '50%', left: '45%'}} >网宿冷站监控平台</Decoration11>
+            <Decoration5 style={{width: "100%", height: '40px'}} />
+          </div>
+            <BorderBox13>
+              {/* 上部分的div */}
+              <div className="topDiv">
+                {/* <ActiveRingChart config={this.state.topdata1} style={{ width: '400px', height: '400px'}} /> */}
+
+              </div>
+
+              <div className="bottomDiv">
+                  {/* 下半部分左侧div */}
+                  <div className="LeftBottomDiv">
+
+                  </div>
+                  {/* 下半部分右侧div */}
+                  <div className="RightBottomDiv">
+                      {/* 下半部分右侧上面的div */}
+                      <div className="UpLeftBottomDiv">
+
+                      </div>
+                      {/* 下半部分右侧下面的div */}
+                      <div className="DownLeftBottomDiv">
+
+                      </div>
+
+                  </div>
+              </div>
+            </BorderBox13>
+        </FullScreenContainer>
+      </div>
+     );
+  }
+}
+ 
+export default App;

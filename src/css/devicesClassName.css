@@ -1,0 +1,50 @@
+.LengJi_Chart{
+    width: 31%;
+    height: 100%;
+    /* background-color: white; */
+    margin-left: 2%;
+    position: absolute;
+    /* background: url(../img/mask.png); */
+}
+.LengTa_Chart{
+    width: 100%;
+    height: 100%;
+    /* background:white; */
+    /* background: url(../img/mask.png); */
+}
+.ZhiLengDanYuan_Chart{
+    width: 100%;
+    height: 100%;
+    /* background: white; */
+    /* background: url(../img/mask.png); */
+}
+.LengDongBeng_Chart{
+    width: 100%;
+    height: 100%;
+    /* background: white; */
+    background: url(../img/mask.png);
+}
+.LengQueBeng_Chart{
+    width: 100%;
+    height: 100%;
+    /* background: white; */
+    background: url(../img/mask.png);
+}
+.BanHuan_Chart{
+    width: 100%;
+    height: 100%;
+    /* background: white; */
+    background: url(../img/mask.png);
+}
+.LengJiJinChuShui_Chart{
+    width: 100%;
+    height: 100%;
+    /* background: white; */
+    background: url(../img/mask.png);
+}
+.XuLengGuan{
+    width: 100%;
+    height: 100%;
+    /* background: white; */
+    background: url(../img/mask.png);
+}

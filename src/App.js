@@ -9,11 +9,10 @@ import {
 import * as echarts from 'echarts';
 
 const bBox11title = "网宿冷站监控平台"
+// 待测试api接口后测试
 class Api extends React.Component{
 
 }
-
-
 
 class App extends Component {
   // eslint-disable-next-line

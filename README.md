@@ -1,18 +1,23 @@
 # 大屏可视化编辑
 
 ## 当前进度
+分页，逻辑结构划分（有bug，暂时未解决）
+
 接入api
 
-画布编辑
+~~初步展示~~
 
-实现跨区域拖动
+~~接入echart~~
 
-~~初步绘制界面（双飞翼布局）~~
+~~测试api和路由~~
+
 
 ---
+### npm install
+安装依赖
 
 ### `npm start`
 启动项目
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
+打开 [http://localhost:3000](http://localhost:3000) 在浏览器中查看
 

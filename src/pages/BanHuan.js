@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import '../css/index.css'
-import '../css/App.css'
+// import '../css/App.css'
 //import axios from 'axios';
 import * as echarts from 'echarts';
-//import { title } from '@jiaminghi/data-view-react/lib/index-fcdce9c7';
 //import { async } from '@jiaminghi/data-view-react/lib/index-cd27b7f6';
+
 
 // 待测试api接口后测试
 class Api extends React.Component {
@@ -34,13 +34,12 @@ class Api extends React.Component {
     }
 }
 
-class LengQueBeng extends Component {
+class BanHuan extends Component {
     // eslint-disable-next-line
     constructor(props) {
         super(props)
     }
     componentDidMount(){
-        console.log()
 
         var app = {};
         const posList = [
@@ -103,7 +102,7 @@ class LengQueBeng extends Component {
                     position: app.config.position,
                     distance: app.config.distance
                 };
-                LengQueBeng.setOption({
+                myChart.setOption({
                     series: [
                         {
                             label: labelOption
@@ -135,13 +134,15 @@ class LengQueBeng extends Component {
         //         name: {}
         //     }
         // };
-        var id ='LengQueBeng_Chart'
-        var LengQueBengChart
+        var id ='BanHuan_Chart'
+        var myChart;
+        //使用echarts时，如果不存在DOM，就会报错，处理方法先检查是否DOM存在：
         if(document.getElementById(id) == null){
             return
         }
         echarts.dispose(document.getElementById(id))
-        LengQueBengChart = echarts.init(document.getElementById(id));
+        
+        myChart = echarts.init(document.getElementById(id));
         var option = {
             title: {
                 text: '精密空调',
@@ -159,7 +160,7 @@ class LengQueBeng extends Component {
                 borderWidth: 1
             },
             tooltip: {
-                //confine:true,// tooltip 框限制在图表的区域内
+                confine:true,// tooltip 框限制在图表的区域内
                 trigger: 'axis',
                 axisPointer: {
                     type: 'shadow'
@@ -452,12 +453,12 @@ class LengQueBeng extends Component {
                 },
             ]
         };
-        LengQueBengChart.setOption(option);
+        myChart.setOption(option);
     }
     render() {
         return (
-                <div id="LengQueBeng_Chart"></div>
+                <div id="BanHuan_Chart"></div>
         );
     }
 }
-export default LengQueBeng;
+export default BanHuan;

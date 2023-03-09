@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import '../css/index.css'
-import '../css/App.css'
-//import axios from 'axios';
 import * as echarts from 'echarts';
 //import { async } from '@jiaminghi/data-view-react/lib/index-cd27b7f6';
 
@@ -145,7 +143,7 @@ class LengJi extends Component {
         LengJiChart = echarts.init(document.getElementById(id));
         var option = {
             title: {
-                text: '精密空调',
+                text: '冷机',
                 left: 20,
                 textStyle: {
                     lineHeight: 30,
@@ -457,14 +455,7 @@ class LengJi extends Component {
     }
     render() {
         return (
-            <div style={{
-                width:'100%', 
-                height:'100%',
-                position:'absolute',
-                }}>
-
-                <div id="LengJi_Chart"></div>
-            </div>
+            <div id="LengJi_Chart" ></div>
         );
     }
 }

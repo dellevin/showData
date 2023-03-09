@@ -7,10 +7,14 @@ import {
     Decoration5, Decoration11,
 } from '@jiaminghi/data-view-react'
 
-import './pages/LengJi'
 import LengJi from './pages/LengJi'
-import './pages/LengQueBeng'
 import LengQueBeng from './pages/LengQueBeng'
+import LengTa from './pages/LengTa'
+import ZhiLengDanYuan from './pages/ZhiLengDanYuan'
+import LengDongBeng from './pages/LengDongBeng'
+import XuLengGuan from './pages/XuLengGuan'
+import BanHuan from './pages/BanHuan'
+import LengJiJinChuShui from './pages/LengJiJinChuShui'
 
 
 const bBox11title = "网宿冷站监控平台"
@@ -32,30 +36,25 @@ class App extends React.Component {
                         <div className="topDiv">
                             {/* 冷机设备的chart */}
                             <LengJi />
-                            {/* <div id="LengJi_Chart"></div> */}
-
-                            {/* 冷塔设备的chart */}
-                            <div id="LengTa_Chart"></div>
-                            {/* 制冷单元的chart */}
-                            <div id="ZhiLengDanYuan_Chart"></div>
+                            <LengTa />
+                            <ZhiLengDanYuan />
                         </div>
 
                         <div className="bottomDiv">
                             {/* 下半部分左侧div */}
                             <div className="LeftBottomDiv">
-                                <div id="LengDongBeng_Chart"></div>
+                                <LengDongBeng />
                                 <LengQueBeng />
-                                {/* <div id="LengQueBeng_Chart"></div> */}
                             </div>
                             {/* 下半部分中间div */}
                             <div className='CenterBottomDiv'>
-                                <div id='XuLengGuan'></div>
+                                <XuLengGuan/>
                             </div>
 
                             {/* 下半部分右侧div */}
                             <div className="RightBottomDiv">
-                                <div id="BanHuan_Chart"></div>
-                                <div id="LengJiJinChuShui_Chart"></div>
+                                <BanHuan/>
+                                <LengJiJinChuShui />
                             </div>
 
                         </div>

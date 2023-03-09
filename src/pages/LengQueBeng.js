@@ -3,8 +3,8 @@ import '../css/index.css'
 import '../css/App.css'
 //import axios from 'axios';
 import * as echarts from 'echarts';
+//import { title } from '@jiaminghi/data-view-react/lib/index-fcdce9c7';
 //import { async } from '@jiaminghi/data-view-react/lib/index-cd27b7f6';
-
 
 // 待测试api接口后测试
 class Api extends React.Component {
@@ -34,12 +34,13 @@ class Api extends React.Component {
     }
 }
 
-class LengJi extends Component {
+class LengQueBeng extends Component {
     // eslint-disable-next-line
     constructor(props) {
         super(props)
     }
     componentDidMount(){
+        console.log()
 
         var app = {};
         const posList = [
@@ -102,7 +103,7 @@ class LengJi extends Component {
                     position: app.config.position,
                     distance: app.config.distance
                 };
-                LengJiChart.setOption({
+                LengQueBeng.setOption({
                     series: [
                         {
                             label: labelOption
@@ -134,15 +135,13 @@ class LengJi extends Component {
         //         name: {}
         //     }
         // };
-        var id ='LengJi_Chart'
-        var LengJiChart;
-        //使用echarts时，如果不存在DOM，就会报错，处理方法先检查是否DOM存在：
+        var id ='LengQueBeng_Chart'
+        var LengQueBengChart
         if(document.getElementById(id) == null){
             return
         }
         echarts.dispose(document.getElementById(id))
-        
-        LengJiChart = echarts.init(document.getElementById(id));
+        LengQueBengChart = echarts.init(document.getElementById(id));
         var option = {
             title: {
                 text: '精密空调',
@@ -160,7 +159,7 @@ class LengJi extends Component {
                 borderWidth: 1
             },
             tooltip: {
-                confine:true,// tooltip 框限制在图表的区域内
+                //confine:true,// tooltip 框限制在图表的区域内
                 trigger: 'axis',
                 axisPointer: {
                     type: 'shadow'
@@ -453,19 +452,14 @@ class LengJi extends Component {
                 },
             ]
         };
-        LengJiChart.setOption(option);
+        LengQueBengChart.setOption(option);
     }
     render() {
         return (
-            <div style={{
-                width:'100%', 
-                height:'100%',
-                position:'absolute',
-                }}>
-
-                <div id="LengJi_Chart"></div>
+            <div style={{width:'100%', height:'100%'}}>
+                <div id="LengQueBeng_Chart"></div>
             </div>
         );
     }
 }
-export default LengJi;
+export default LengQueBeng;

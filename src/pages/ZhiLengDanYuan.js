@@ -21,9 +21,10 @@ class Api extends React.Component {
             //x坐标轴的时间显示
             xAxisData:['8:30:00', '8:30:05', '8:30:10', '8:30:15', '8:30:20', '8:30:25', '8:30:30']
         }
-        
+
     }
     componentDidMount = async () => {
+        
         //ajax 数据获取
         // var toUrl = "https://fakerapi.it/api/v1/addresses?_quantity=9";
         // const res = await axios.get(toUrl);
@@ -40,7 +41,6 @@ class ZhiLengDanYuan extends Component {
         super(props)
     }
     componentDidMount(){
-
         var app = {};
         const posList = [
             'left',

@@ -6,12 +6,38 @@ import {
     BorderBox13,
     Decoration5, Decoration11,
 } from '@jiaminghi/data-view-react'
+//import axios from 'axios';
 import * as echarts from 'echarts';
+import { title } from '@jiaminghi/data-view-react/lib/index-fcdce9c7';
+//import { async } from '@jiaminghi/data-view-react/lib/index-cd27b7f6';
 
 const bBox11title = "网宿冷站监控平台"
 // 待测试api接口后测试
 class Api extends React.Component {
-
+    constructor(props) {
+        super(props)
+        this.state={
+            titleText:'精密空调',
+            //Legend控制显示设备的数据，也就是前端中的左边哪些东西
+            LegendData: [
+                '精密空调1制冷量', '精密空调2制冷量', '精密空调3制冷量', '精密空调4制冷量', '精密空调5制冷量', '精密空调6制冷量', '精密空调7制冷量', '精密空调系统总制冷量',
+                '精密空调1电功率', '精密空调2电功率', '精密空调3电功率', '精密空调4电功率', '精密空调5电功率', '精密空调6电功率', '精密空调7电功率', '精密空调系统总电功率',
+                '精密空调1COP', '精密空调2COP', '精密空调3COP', '精密空调4COP', '精密空调5COP', '精密空调6COP', '精密空调7COP', '精密空调系统总COP',
+            ],
+            //x坐标轴的时间显示
+            xAxisData:['8:30:00', '8:30:05', '8:30:10', '8:30:15', '8:30:20', '8:30:25', '8:30:30']
+        }
+        
+    }
+    componentDidMount = async () => {
+        //ajax 数据获取
+        // var toUrl = "https://fakerapi.it/api/v1/addresses?_quantity=9";
+        // const res = await axios.get(toUrl);
+        // console.log(res.data.data)
+        // this.setState({
+        //     roleList: res.data.data
+        // })
+    }
 }
 
 class App extends Component {
@@ -19,7 +45,8 @@ class App extends Component {
     constructor(props) {
         super(props)
     }
-    componentDidMount() {
+    componentDidMount(){
+        console.log()
 
         var app = {};
         const posList = [
@@ -473,5 +500,4 @@ class App extends Component {
         );
     }
 }
-
 export default App;

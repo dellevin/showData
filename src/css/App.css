@@ -73,10 +73,13 @@
     text-align: center;
     color: white;
     line-height: 150px;
-    font-size: 90px;
+    font-size: 80px;
     font-family: led regular;
     letter-spacing: 4px;
     background: url("../img/panel.png") 0 0 / 100% 100% no-repeat;
+}
+#Clock div h2{
+    margin: 20px;
 }
 .rootData {
     position: fixed;

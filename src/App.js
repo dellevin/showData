@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './css/index.css'
 import './css/App.css'
 import {
@@ -15,6 +15,9 @@ import LengDongBeng from './pages/LengDongBeng'
 import XuLengGuan from './pages/XuLengGuan'
 import BanHuan from './pages/BanHuan'
 import LengJiJinChuShui from './pages/LengJiJinChuShui'
+import './testPages/table'
+// import { Table } from 'antd'
+// import Axios from './testPages/table'
 
 
 const bBox11title = "网宿冷站监控平台"
@@ -68,7 +71,7 @@ class App extends React.Component {
                         <div style={{ height: '20px' }}></div>
                         {/* 上部分的div */}
                         <div className="topDiv">
-                            {/* 冷机设备的chart */}
+                            {/* <Axios id="LengJi_Chart"/> */}
                             <LengJi />
                             <LengTa />
                             <ZhiLengDanYuan />
@@ -82,7 +85,7 @@ class App extends React.Component {
                             </div>
                             {/* 下半部分中间div */}
                             <div className='CenterBottomDiv'>
-                                <div id="Clock" > 
+                                <div id="Clock" >
                                     <Clock />
                                 </div>
                                 <XuLengGuan />

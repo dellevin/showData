@@ -1,6 +1,7 @@
 import React from "react";
 import axios from 'axios';
 import { Input,Table } from 'antd';
+import { async } from "@jiaminghi/data-view-react/lib/index-cd27b7f6";
 const { Search } = Input;
 
 class Axios extends React.Component {
@@ -9,6 +10,7 @@ class Axios extends React.Component {
     super(props)
     //保存表格数据
     this.state = {
+      date:1,
       columns:[
         {
           title:'id',
@@ -39,14 +41,20 @@ class Axios extends React.Component {
       roleList: [] 
     }
   }
-  componentDidMount = async () => {
+  componentDidMount () {
+    setInterval(async()=>{
+      console.log(this.state.date++)
     //ajax 数据获取
-    var toUrl = "https://fakerapi.it/api/v1/addresses?_quantity=9";
-    const res = await axios.get(toUrl);
-    console.log(res.data.data)
-    this.setState({
-      roleList:res.data.data 
-    })
+      var toUrl = "https://fakerapi.it/api/v1/addresses?_quantity=9";
+      const res = await axios.get(toUrl);
+      //console.log(res.data.data)
+      this.setState({
+        roleList:res.data.data 
+      })
+    },5000)
+
+
+
     // axios.get(toUrl).then(function (result) {
     //   const data = result.data.data;
     //   console.log(data)
@@ -61,29 +69,7 @@ class Axios extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {/* <h2>获取api,控制台打印</h2>
-        <button onClick={this.componentDidMount}>点击按钮</button> */}
-        {/* <table border="1">
-          <tr>
-            <th>id</th>
-            <th>street</th>
-            <th>city</th>
-            <th>zipcode</th>
-            <th>country</th>
-          </tr>
-          {this.state.roleList.map((role) =>
-            <tr key={role.id}>
-              <td>{role.id}</td>
-              <td>{role.street}</td>
-              <td>{role.city}</td>
-              <td>{role.zipcode}</td>
-              <td>{role.country}</td>
-            </tr>
-          )}
-        </table> */}
-        
         <Table dataSource={this.state.roleList} columns={this.state.columns}></Table>
-      
       </React.Fragment>
     )
   }
@@ -114,4 +100,4 @@ class table extends React.Component {
   }
 }
 
-export default table;
+export default Axios;

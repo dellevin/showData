@@ -5,9 +5,8 @@ import '../css/index.css'
 import * as echarts from 'echarts';
 //import { async } from '@jiaminghi/data-view-react/lib/index-cd27b7f6';
 
-
-// 待测试api接口后测试
-class Api extends React.Component {
+class LengTa extends Component {
+    // eslint-disable-next-line
     constructor(props) {
         super(props)
         this.state={
@@ -22,22 +21,6 @@ class Api extends React.Component {
             xAxisData:['8:30:00', '8:30:05', '8:30:10', '8:30:15', '8:30:20', '8:30:25', '8:30:30']
         }
         
-    }
-    componentDidMount = async () => {
-        //ajax 数据获取
-        // var toUrl = "https://fakerapi.it/api/v1/addresses?_quantity=9";
-        // const res = await axios.get(toUrl);
-        // console.log(res.data.data)
-        // this.setState({
-        //     roleList: res.data.data
-        // })
-    }
-}
-
-class LengTa extends Component {
-    // eslint-disable-next-line
-    constructor(props) {
-        super(props)
     }
     componentDidMount(){
 
@@ -145,7 +128,7 @@ class LengTa extends Component {
         myChart = echarts.init(document.getElementById(id));
         var option = {
             title: {
-                text: '冷塔',
+                text: this.state.titleText,
                 left: 20,
                 textStyle: {
                     lineHeight: 30,

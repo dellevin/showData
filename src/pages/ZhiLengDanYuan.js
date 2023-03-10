@@ -5,13 +5,12 @@ import '../css/index.css'
 import * as echarts from 'echarts';
 //import { async } from '@jiaminghi/data-view-react/lib/index-cd27b7f6';
 
-
-// 待测试api接口后测试
-class Api extends React.Component {
+class ZhiLengDanYuan extends Component {
+    // eslint-disable-next-line
     constructor(props) {
         super(props)
         this.state={
-            titleText:'精密空调',
+            titleText:'制冷单元',
             //Legend控制显示设备的数据，也就是前端中的左边哪些东西
             LegendData: [
                 '精密空调1制冷量', '精密空调2制冷量', '精密空调3制冷量', '精密空调4制冷量', '精密空调5制冷量', '精密空调6制冷量', '精密空调7制冷量', '精密空调系统总制冷量',
@@ -22,23 +21,6 @@ class Api extends React.Component {
             xAxisData:['8:30:00', '8:30:05', '8:30:10', '8:30:15', '8:30:20', '8:30:25', '8:30:30']
         }
 
-    }
-    componentDidMount = async () => {
-        
-        //ajax 数据获取
-        // var toUrl = "https://fakerapi.it/api/v1/addresses?_quantity=9";
-        // const res = await axios.get(toUrl);
-        // console.log(res.data.data)
-        // this.setState({
-        //     roleList: res.data.data
-        // })
-    }
-}
-
-class ZhiLengDanYuan extends Component {
-    // eslint-disable-next-line
-    constructor(props) {
-        super(props)
     }
     componentDidMount(){
         var app = {};
@@ -145,7 +127,7 @@ class ZhiLengDanYuan extends Component {
         myChart = echarts.init(document.getElementById(id));
         var option = {
             title: {
-                text: '制冷单元',
+                text: this.state.titleText,
                 left: 20,
                 textStyle: {
                     lineHeight: 30,

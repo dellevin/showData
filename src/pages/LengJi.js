@@ -3,6 +3,7 @@ import '../css/index.css'
 import * as echarts from 'echarts';
 import axios from 'axios'
 import { async } from '@jiaminghi/data-view-react/lib/index-cd27b7f6';
+
 class LengJi extends Component {
     // eslint-disable-next-line
     constructor(props) {
@@ -22,12 +23,12 @@ class LengJi extends Component {
     // eslint-disable-next-line
     componentDidMount=async()=>{
          //ajax 数据获取
-        //var toUrl = "https://fakerapi.it/api/v1/addresses?_quantity=9";
-        //const res = await axios.get(toUrl);
-        //console.log(res.data.data)
-        //this.setState({
-        //    roleList: res.data.data
-        //})
+        // var toUrl = "https://fakerapi.it/api/v1/addresses?_quantity=9";
+        // const res = await axios.get(toUrl);
+        // console.log(res.data.data)
+        // this.setState({
+        //     roleList: res.data.data
+        // })
         
 
         var app = {};

@@ -8,7 +8,7 @@ class LengJi extends Component {
     constructor(props) {
         super(props)
         this.state={
-            titleText:'lengji',
+            titleText:'冷机',
             //Legend控制显示设备的数据，也就是前端中的左边哪些东西
             LegendData: [
                 '精密空调1制冷量', '精密空调2制冷量', '精密空调3制冷量', '精密空调4制冷量', '精密空调5制冷量', '精密空调6制冷量', '精密空调7制冷量', '精密空调系统总制冷量',
@@ -19,15 +19,16 @@ class LengJi extends Component {
             xAxisData:['8:30:00', '8:30:05', '8:30:10', '8:30:15', '8:30:20', '8:30:25', '8:30:30']
         }
     }
+    // eslint-disable-next-line
     componentDidMount=async()=>{
-
          //ajax 数据获取
-        var toUrl = "https://fakerapi.it/api/v1/addresses?_quantity=9";
-        const res = await axios.get(toUrl);
-        console.log(res.data.data)
-        this.setState({
-            roleList: res.data.data
-        })
+        //var toUrl = "https://fakerapi.it/api/v1/addresses?_quantity=9";
+        //const res = await axios.get(toUrl);
+        //console.log(res.data.data)
+        //this.setState({
+        //    roleList: res.data.data
+        //})
+        
 
         var app = {};
         const posList = [

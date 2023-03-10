@@ -5,9 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    monospace,led regular;
+}
+@font-face {
+  font-family: 'led regular';
+  src: url('../assets/font/DS-DIGIT.TTF');
 }

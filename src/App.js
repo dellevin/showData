@@ -18,7 +18,41 @@ import LengJiJinChuShui from './pages/LengJiJinChuShui'
 
 
 const bBox11title = "网宿冷站监控平台"
-// 待测试api接口后测试
+function FormattedDate(props) {
+    return <h2>{props.date.toLocaleTimeString()}</h2>;
+}
+
+class Clock extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { date: new Date() };
+    }
+
+    componentDidMount() {
+        this.timerID = setInterval(
+            () => this.tick(),
+            1000
+        );
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timerID);
+    }
+
+    tick() {
+        this.setState({
+            date: new Date()
+        });
+    }
+
+    render() {
+        return (
+            <div>
+                <FormattedDate date={this.state.date} />
+            </div>
+        );
+    }
+}
 class App extends React.Component {
     render() {
         return (
@@ -48,12 +82,15 @@ class App extends React.Component {
                             </div>
                             {/* 下半部分中间div */}
                             <div className='CenterBottomDiv'>
-                                <XuLengGuan/>
+                                <div id="Clock" > 
+                                    <Clock />
+                                </div>
+                                <XuLengGuan />
                             </div>
 
                             {/* 下半部分右侧div */}
                             <div className="RightBottomDiv">
-                                <BanHuan/>
+                                <BanHuan />
                                 <LengJiJinChuShui />
                             </div>
 
